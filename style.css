@@ -1,0 +1,89 @@
+/* CSS rules to specify families
+
+font-family: 'Alice', serif;
+font-family: 'Dosis', sans-serif;
+ 
+*/
+
+:root {
+    --red: #B2163A;
+    --yellow: #E0935F;
+    --brown: #A46464;
+    --orange:  #DE6A5D;
+    --grey:  #668080;
+}
+
+body { 
+    width: 90%;
+    max-width: 80rem;
+    margin: auto;
+}
+#two-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#first-column {
+    display: flex;
+    /* display: grid;
+    grid-template-columns: repeat(6, 1fr); */
+    /* gap: 10px; */
+}
+
+/* MEDIA QUERY PER DESKTOP */
+@media screen and (min-width: 1100px){
+    body { 
+        width: 70%;
+    }
+    #two-columns {
+        flex-direction: row;
+    }
+    #second-column {
+        flex: 1;
+    }
+    #first-column {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.logo-svg {
+    display: block;
+    margin: auto;
+}
+
+.grid-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 2.5rem;    
+}
+
+@media (min-width: 600px) {
+    .grid-container { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 900px) {
+    .grid-container { grid-template-columns: repeat(3, 1fr); }
+}
+
+.text-under-image-grid {
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500; 
+}
+
+.flex {
+    display: flex;
+}
+
+
+
+
+
