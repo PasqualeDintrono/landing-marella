@@ -10,13 +10,32 @@ font-family: 'Dosis', sans-serif;
     --yellow: #E0935F;
     --brown: #A46464;
     --orange:  #DE6A5D;
-    --grey:  #668080;
+    --gray:  #668080;
 }
 
 body { 
     width: 90%;
     max-width: 80rem;
     margin: auto;
+}
+.container {
+    width: 100%;
+    margin: auto;
+}
+@media screen and (min-width: 1100px) {
+    .container {
+        width: 80%;
+    }
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-family: 'Dosis', sans-serif;
+}
+p {
+    margin: 0;
+    font-family: 'Alice', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
 }
 #two-columns {
     display: flex;
@@ -25,18 +44,51 @@ body {
 }
 #first-column {
     display: flex;
+    justify-content: center;
     /* display: grid;
     grid-template-columns: repeat(6, 1fr); */
     /* gap: 10px; */
 }
-
+#first-horizontal-banner {
+    display: flex;
+} 
+#first-vertical-banner {
+    display: none;
+}
+div#first-vertical-banner img {
+    max-width: 10rem;
+}
+svg#logo-marella {
+    width: 50%;
+    margin: 3rem auto;
+}
+h2#subtitle, h2#subtitle-2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    color: var(--red);
+    margin-top: 0;
+    margin-bottom: 3rem;
+}
+h3.second-column-header {
+    color: var(--red);
+    font-weight: 500;
+    line-height: 3.5rem;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
 /* MEDIA QUERY PER DESKTOP */
+@media screen and (min-width: 820px) {
+    svg#logo-marella {
+        width: 25%;
+    }
+}
 @media screen and (min-width: 1100px){
     body { 
         width: 70%;
     }
     #two-columns {
         flex-direction: row;
+        gap: 4rem;
     }
     #second-column {
         flex: 1;
@@ -44,7 +96,22 @@ body {
     #first-column {
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
         gap: 10px;
+    }
+    #first-horizontal-banner {
+        display: none;
+    }
+    #first-vertical-banner {
+        display: flex;
+    }
+    h3.second-column-header {
+        font-size: 3.5rem;
+        margin-bottom: 3rem;
+    }
+    p {
+        font-size: 2rem;
+        margin-bottom: 3rem;
     }
 }
 
@@ -58,27 +125,97 @@ body {
 }
 
 .grid-container {
-    max-width: 1200px;
-    margin: 0 auto;
     display: grid;
-    gap: 2.5rem;    
+    gap: 3.5rem;   
 }
 
-@media (min-width: 600px) {
-    .grid-container { grid-template-columns: repeat(2, 1fr); }
-}
+.grid-container { grid-template-columns: repeat(2, 1fr); }
 
-@media (min-width: 900px) {
+
+@media (min-width: 820px) {
     .grid-container { grid-template-columns: repeat(3, 1fr); }
 }
 
-.text-under-image-grid {
-    text-align: center;
-    font-family: 'Dosis', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 500; 
+.grid-item img {
+    width: 100%;
 }
-
+.grid-item p {
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    font-family: 'Dosis';
+}
+section#pasta-granomischio-section {
+    margin-top: 5rem;
+}
+img#logo-granomischio {
+    width: 35rem;
+    max-width: 100%;
+}
+div#logo-granomischio-wrapper {
+    display: flex;
+    justify-content: center;
+}
+svg#logo-marella-granomischio {
+    height: 1.5rem;
+    width: auto;
+    margin: 0;
+}
+div#same-process-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+div#same-process-wrapper h3 {
+    font-weight: 400;
+    font-size: 2rem;
+    text-align: center;
+}
+@media screen and (min-width: 820px) {
+    div#same-process-wrapper {
+        flex-direction: row;
+        gap: .5rem;
+    }
+}
+section#pasta-granomischio-section #first-column img {
+    max-width: 20rem;
+}
+h3#granomischio-hundred-percent {
+    color: var(--gray);
+    font-weight: 500;
+    line-height: 3.5rem;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+@media screen and (min-width: 1100px) {
+    h3#granomischio-hundred-percent {
+        font-size: 3.5rem;
+    }
+}
+div#granomischio-features-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+div#granomischio-features {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+div#granomischio-features p {
+    margin: 0;
+    font-family: 'Dosis', sans-serif;
+}
+div#granomischio-features p span {
+    font-weight: bold;
+}
+div#granomischio-features img {
+    height: 2rem;
+}
 .flex {
     display: flex;
 }
